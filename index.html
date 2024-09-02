@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+body {
+            font-family: Arial, sans-serif;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* ...........QUESTION 1/2 Styling.................... */
+    .container {
+        text-align: center;
+        padding: 20px;
+    }
+    .phone-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap; 
+    }
+    .phone-item {
+        text-align: center;
+    }
+    img {
+        max-width: 200px; 
+        height: auto;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .phone-name {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+
+/* .................QUESTION 3 Styling...................................... */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .delete-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        /* ..........QUESTION 4 Styling............... */
+        .image-container {
+            display: inline-block;
+        }
+        .image-container img {
+            width: 400px; 
+            height: 400px;
+            transition: opacity 0.3s ease; 
+        }
+
+/* ......................QUESTION 5 Styling............... */
+
+.counter-container {
+            display: inline-block;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .counter-display {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .button {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #f0f0f0;
+        }
+        .increase {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .decrease {
+            background-color: #f44336;
+            color: white;
+        }
+
+</style>
+<body>
+<!-- ...................QUESTION 1/2.............................. -->
+    <div class="container">
+        <h1>Mobile Phone Lookup</h1>
+        <div class="phone-gallery">
+            <div class="phone-item">
+                <img src="./assets/images (1).jfif" alt="iPhone 14" onclick="showAlert('iphone 14')">
+                <div class="phone-name">iPhone 14</div>
+            </div>
+            <div class="phone-item">
+                <img src="./assets/images.jfif" alt="Galaxy A34" onclick="showAlert('Galaxy-A34')">
+                <div class="phone-name">Galaxy A34</div>
+            </div>
+            <div class="phone-item">
+                <img src="./assets/Untitled-1-Recovered-Recov.jpg" alt="Tecno Spark" onclick="showAlert('Tecno Spark')">
+                <div class="phone-name">Tecno Spark</div>
+            </div>
+            <div class="phone-item">
+
+                <img src="./assets/images (2).jfif" alt="Vivo V23" onclick="showAlert('Vivo V23')">
+                <div class="phone-name">Vivo V23</div>
+    
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ................QUESTION 3....................... -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="student-table-body">
+        </tbody>
+    </table>
+
+
+<!-- ..............QUESTION 4.................... --> 
+
+
+<h1>Question 4</h1>
+ <div class="image-container">
+    <img 
+        id="image" 
+        src="./assets/images (3).jfif" 
+        alt="Hover Image"
+        onmouseover="changeImage(src='./assets/car4.jfif')" 
+        onmouseout="resetImage(src='./assets/car 2.jpg')"
+    >
+</div> 
+
+
+
+
+<!-- .............QUESTION 5............................ -->
+
+<div class="counter-container">
+    <div id="counter" class="counter-display">0</div>
+    <button class="button increase" onclick="increaseCounter()">Increase</button>
+    <button class="button decrease" onclick="decreaseCounter()">Decrease</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./index.js"> </script>
+</body>
+</html>
